@@ -1,32 +1,40 @@
-Massively by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+Data Analyst Portfolio | Warrie Godswill Usenobong
+Welcome to my portfolio! I am a Data Analyst passionate about transforming raw data into actionable insights through visualization and automation. This repository contains the source code for my portfolio website and documentation for my core projects.
 
+🚀 Projects Overview
+📊 Nigerian Digital Banking Sentiment Dashboard
+Tools: Python, Streamlit, Plotly.
 
-This is Massively, a text-heavy, article-oriented design built around a huge background
-image (with a new parallax implementation I'm testing) and scroll effects (powered by
-Scrollex). A *slight* departure from all the one-pagers I've been doing lately, but one
-that fulfills a few user requests and makes use of some new techniques I've been wanting
-to try out. Enjoy it :)
+Description: A dashboard analyzing customer feedback for Nigerian digital banks to identify sentiment trends and service gaps.
 
-Demo images* courtesy of Unsplash, a radtastic collection of CC0 (public domain) images
-you can use for pretty much whatever.
+🛳️ Titanic Dataset Analysis
+Tools: MySQL, HTML/CSS.
 
-(* = not included)
+Description: An exploratory data analysis (EDA) of the Titanic passenger manifest, focusing on survival correlations using SQL queries.
 
-AJ
-aj@lkn.io | @ajlkn
+🍪 Cookie Sales Performance
+Tools: MySQL, Data Visualization.
 
+Description: Analysis of sales records to determine top-performing products and seasonal trends.
 
-Credits:
+🤖 Smart Job Hunter Automation
+Tools: n8n, Google Sheets, APIs.
 
-	Demo Images:
-		Unsplash (unsplash.com)
+Description: A custom workflow designed to aggregate, score, and track job listings automatically.
 
-	Icons:
-		Font Awesome (fontawesome.io)
+🛠️ Technical Stack
+Languages: Python (Pandas, Plotly), SQL (MySQL).
 
-	Other:
-		jQuery (jquery.com)
-		Scrollex (github.com/ajlkn/jquery.scrollex)
-		Responsive Tools (github.com/ajlkn/responsive-tools)
+Tools: Docker, Streamlit, n8n, Git/GitHub.
+
+Web: HTML5, CSS3.
+
+📧 Connect with Me
+LinkedIn: https://www.linkedin.com/in/warrie-godswill-2ab6b7169/
+
+Email: warriegodswill01@gmail.com
+
+How to use this repository
+View Projects: Click on the .html files above to see specific project walkthroughs.
+
+Live Site: Visit my live portfolio at [https://spenzzi-tech.github.io/portfolio-website/](https://spenzzi-tech.github.io/portfolio-website/) (once deployed).
