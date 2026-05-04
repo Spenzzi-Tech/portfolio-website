@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sales Performance Analysis</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+  --gold: #c9a84c;
+  --gold-light: #e8c97a;
+  --gold-dim: rgba(201,168,76,0.15);
+  --black: #000000;
+  --white: #ffffff;
+  --white-dim: rgba(255,255,255,0.7);
+}
+
+/* base reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  padding: 40px;
+}
+
+/* layout container */
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* headings */
+h1 {
+  color: var(--gold);
+  margin-bottom: 10px;
+  margin-top: -30px;
+  text-align: center;
+}
+
+h2 {
+  margin-top: 30px;
+  color: var(--gold);
+  font-size: 2.1rem;
+  top: 10px;
+  margin-left: 30px;
+}
+
+ul{
+  margin-left: 50px;
+}
+
+/* text */
+p {
+  margin-left: 30px;
+}
+
+/* tags */
+.tags {
+  margin-bottom: 25px;
+  margin-left: 15px;
+}
+
+.tags span {
+  display: inline-block;
+  border: 1px solid rgba(201,168,76,0.4);
+  padding: 4px 10px;
+  margin-right: 8px;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+/* buttons */
+.btn {
+  padding: 10px 24px;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.25s, color 0.25s;
+  display: inline-block;
+}
+
+.btn:hover {
+  background: var(--gold);
+  color: var(--black);
+}
+
+.btn.solid {
+  background: var(--gold);
+  color: var(--black);
+}
+
+.btn.solid:hover {
+  background: var(--gold-light);
+}
+
+/* project cards (reusable across pages) */
+.project-card {
+  border: 1px solid rgba(201,168,76,0.2);
+  padding: 24px;
+  background: rgba(201,168,76,0.03);
+  transition: 0.25s;
+}
+
+.project-card:hover {
+  border-color: var(--gold);
+  background: rgba(201,168,76,0.07);
+}
+
+/* grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* image */
+.project-img {
+  width: 100%;
+  margin-top: 20px;
+  border: 1px solid rgba(201,168,76,0.2);
+}
+
+/* back link */
+.back-btn {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: var(--gold);
+  text-decoration: none;
+  font-size: 0.5rem;
+  letter-spacing: 0.2em;
+  margin-bottom: 40px;
+  margin-top: 30px;
+  padding: 10px 20px;
+  border: 1px solid var(--gold);
+}
+.back-btn:hover {
+  background: var(--gold);
+  color: var(--black);
+}
+.highlight {
+  color: var(--text-dim);
+  margin-bottom: 20px;
+  font-size: 1.12rem;
+  max-width: 85%;
+  margin: 0 auto 35px auto;
+  line-height: 1.6;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+</style>
+
+<div class="project-container">
+
+  <a href="index.html#projects" class="back-btn">← Back to Projects</a>
+
+  <h1>Superstore Sale Performance Analysis</h1>
+  <p class="highlight"> Analysed  9,994 Total Orders📦, 4 Regions🌍 Covered across the country, 3 Product Categories🗂️, 17 Sub-categories📊,
+    Tracked Profit Margin💰 and Data Cleaned via Power Query.
+  </p>
+
+  <div class="tags">
+    <span class="tags">Microsoft Excel</span>
+    <span class="tags">Pivot Table</span>
+    <span class="tags">Power Query</span>
+    <span class="tags">Conditoinal Formatting</span>
+  </div>
+
+  <h2>Project Overview</h2>
+  <p class="highlight">
+    This project is a comprehensive, end-to-end data analytics case study built on the globally recognised Sample Superstore dataset "a rich collection of real-world retail transactions spanning four regions",three major product categories, 17 sub-categories, and multiple customer segments across the United States.
+    The goal was simple but powerful: take thousands of rows of raw, unstructured sales data and transform it into a clear, interactive, decision-ready Excel dashboard that any business stake-holder from a sales manager to a CEO could open and immediately understand.
+    The project covers the full data analytics lifecycle from data importation and cleaning, through transformation and modelling, all the way to visual storytelling and insight generation. Every step was intentional. Every chart tells a story. Every KPI answers a real business question.
+    This is not just a dashboard. It is a business intelligence tool built entirely inside Microsoft Excel, proving that you do not need expensive software to deliver executive-level insights. With the right skills, Excel alone can reveal the difference between a profitable business decision and a costly mistake.
+    The superstore in this dataset was unknowingly losing money on certain products while over-investing in underperforming regions. This dashboard makes those problems visible, measurable, and also actionable,turning raw numbers into a roadmap for smarter business strategy.
+  </p>
+
+  <h2>Problem Statement</h2>
+  <p class="highlight">
+    The superstore had no clear visibility into which regions, categories, and customer segments were driving profit versus bleeding money. Decision-makers were flying blind.
+  </p>
+
+  <h2>What I Did</h2>
+  <ul>
+    <li>Imported and cleaned raw messy data using Power Query i.e handled duplicates, blank fields, and inconsistent formatting.</li>
+    <li>Built dynamic Pivot Tables to slice performance by region, category, sub-category, and customer segment.</li>
+    <li>Designed an interactive dashboard with slicers, KPI cards, and charts for at-a-glance decision making.</li>
+    <li>Performed profitability analysis across all product subcategories.</li>
+    <li>Identified regional sales patterns and seasonal trends.</li>
+  </ul>
+
+  <h2>Key Findings</h2>
+  <ul>
+    <li>📍 The West region generated the highest revenue consistently.</li>
+    <li>⚠️ The Tables subcategory recorded losses despite high sales volume i.e  a pricing problem.</li>
+    <li>👥 Corporate customers had higher average order value than Consumer segment.</li>
+    <li>📅 Q4 was consistently the strongest quarter across all regions.</li>
+  </ul>
+
+  <h2>Impact</h2>
+  <p class="highlight">
+    These insights could save a real business from continuing to push unprofitable products and redirect marketing budget to high-performing regions and segments, turning data into decisions.
+  </p>
+
+  <img src="images/dashboard2.png" alt="Dashboard Preview" class="project-img">
+
+  <a href="https://1drv.ms/x/c/ad8e3c12c76b1a91/IQAJtlyKE1evQ7dL090yO2EEAdUN-oP50xZelHVxC_JxN3E?e=ezOudN" target="_blank" class="btn">
+    View Live Dashboard
+  </a>
+
+</div>

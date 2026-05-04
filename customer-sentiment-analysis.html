@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Customer Sentiment Analysis</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+  --gold: #c9a84c;
+  --gold-light: #e8c97a;
+  --gold-dim: rgba(201,168,76,0.15);
+  --black: #000000;
+  --white: #ffffff;
+  --white-dim: rgba(255,255,255,0.7);
+}
+
+/* base reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  padding: 40px;
+}
+
+/* layout container */
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* headings */
+h1 {
+  color: var(--gold);
+  margin-bottom: 10px;
+  margin-top: -30px;
+  text-align: center;
+}
+
+h2 {
+  margin-top: 30px;
+  color: var(--gold);
+  font-size: 2.1rem;
+  top: 10px;
+  margin-left: 30px;
+}
+
+ul{
+  margin-left: 50px;
+}
+
+/* text */
+p {
+  margin-left: 30px;
+}
+
+/* tags */
+.tags {
+  margin-bottom: 25px;
+  margin-left: 15px;
+}
+
+.tags span {
+  display: inline-block;
+  border: 1px solid rgba(201,168,76,0.4);
+  padding: 4px 10px;
+  margin-right: 8px;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+/* buttons */
+.btn {
+  padding: 10px 24px;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.25s, color 0.25s;
+  display: inline-block;
+}
+
+.btn:hover {
+  background: var(--gold);
+  color: var(--black);
+}
+
+.btn.solid {
+  background: var(--gold);
+  color: var(--black);
+}
+
+.btn.solid:hover {
+  background: var(--gold-light);
+}
+
+/* project cards (reusable across pages) */
+.project-card {
+  border: 1px solid rgba(201,168,76,0.2);
+  padding: 24px;
+  background: rgba(201,168,76,0.03);
+  transition: 0.25s;
+}
+
+.project-card:hover {
+  border-color: var(--gold);
+  background: rgba(201,168,76,0.07);
+}
+
+/* grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* image */
+.project-img {
+  width: 100%;
+  margin-top: 20px;
+  border: 1px solid rgba(201,168,76,0.2);
+}
+
+/* back link */
+.back-btn {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: var(--gold);
+  text-decoration: none;
+  font-size: 0.5rem;
+  letter-spacing: 0.2em;
+  margin-bottom: 40px;
+  margin-top: 30px;
+  padding: 10px 20px;
+  border: 1px solid var(--gold);
+}
+.back-btn:hover {
+  background: var(--gold);
+  color: var(--black);
+}
+.highlight {
+  color: var(--text-dim);
+  margin-bottom: 20px;
+  font-size: 1.12rem;
+  max-width: 85%;
+  margin: 0 auto 35px auto;
+  line-height: 1.6;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+</style>
+
+<div class="project-container">
+
+  <a href="index.html#projects" class="back-btn">← Back to Projects</a>
+
+  <h1>Customer Sentiment Analysis For Nigerian Digital Banking Platforms</h1>
+  <p class="highlight">
+  Analyzed 10,000+ customer reviews to uncover key drivers of dissatisfaction in Nigerian digital banking apps.
+</p>
+
+  <div class="tags">
+    <span class="tags">Python</span>
+    <span class="tags">NLP</span>
+    <span class="tags">Streamlit</span>
+    <span class="tags">EDA</span>
+  </div>
+
+  <h2>Project Overview</h2>
+  <p class="highlight">
+      Worked on analyzing customer feedback from Nigerian digital banking platforms by preparing and merging multiple datasets from social media and review sources. Focused on cleaning and structuring unstructured text data, then interpreting sentiment outputs to uncover patterns in customer experience. Used AI-assisted analysis to identify recurring issues like transaction failures and app downtime. Presented findings through an interactive Streamlit dashboard that allows real-time exploration of sentiment trends across different banks.
+  </p>
+
+  <h2>Interactive Dashboard</h2>
+  <p class="highlight">
+    Developed a Streamlit dashboard for real-time exploration of sentiment across multiple banks, 
+    enabling comparison and quick identification of key issues.
+  </p>
+
+  <ul>
+    <li>Sentiment distribution (positive, neutral, negative)</li>
+    <li>Bank-level performance comparison</li>
+    <li>Trend analysis over time</li>
+    <li>Keyword extraction from feedback</li>
+  </ul>
+
+  <img src="images/dashboard1.png" alt="Dashboard Preview" class="project-img">
+
+  <a href="https://nigerian-digital-banking-sentiment-app.streamlit.app" target="_blank" class="btn">
+    View Live Dashboard
+  </a>
+
+</div>

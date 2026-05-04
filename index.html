@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <title>Warrie Godswill — Data Analyst</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --gold: #c9a84c;
+      --gold-light: #e8c97a;
+      --gold-dim: rgba(201,168,76,0.15);
+      --black: #000000;
+      --black-soft: #0a0a0a;
+      --white: #ffffff;
+      --white-dim: rgba(255,255,255,0.7);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      height: 100%;
+      background: var(--black);
+      color: var(--white);
+      font-family: 'Montserrat', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 40px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* decorative wave lines background */
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 70% 50%, rgba(201,168,76,0.07) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 40% at 10% 80%, rgba(201,168,76,0.04) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      max-width: 1200px; /* give more room */
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 60px; /* reduce space */
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 1;
+     }
+
+    /* ── LEFT ── */
+    .hero-left {
+      flex: 1; /* give image more space */
+      display: block;
+      justify-content: center;
+      min-width: 320px;
+      max-width: 600px;
+      animation: fadeUp 1s ease both;
+    }
+
+    .name {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      letter-spacing: 0.18em;
+      color: var(--gold);
+      text-transform: uppercase;
+      line-height: 1.1;
+      margin-bottom: 12px;
+      white-space: nowrap;
+      text-shadow:0 0 10px rgba(201, 168, 76, 0.7),0 0 25px rgba(201, 168, 76, 0.4); 
+    }
+
+    .title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 300;
+      font-size: clamp(0.9rem, 1.2vw, 1.35rem);
+      letter-spacing: 0.35em;
+      color: var(--white-dim);
+      text-transform: uppercase;
+      margin-bottom: 36px;
+      line-height: 1.3;
+    }
+
+    .divider {
+      width: 45px;
+      height: 1px;
+      background: linear-gradient(90deg, var(--gold), transparent);
+      flex-shrink: 0;
+    }
+
+    .tagline {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: clamp(1.12rem, 2.3vw, 1.48rem);
+      color: var(--white-dim);
+      line-height: 1.65;
+      margin: 0;
+    }
+    .tagline span{
+      display: block;
+      margin-left: 55px;
+      font-size:inherit;
+      margin-top: 4px;
+    }
+
+    .tagline strong {
+      color: var(--gold-light);
+      font-style: italic;
+      font-weight: 600;
+    }
+
+    .tagline-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      margin-bottom: 2px;
+    }
+
+    .skills {
+      list-style: none;
+      margin-top: 32px;
+      margin-bottom: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .skills li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.9rem;
+      font-weight: 300;
+      color: var(--white-dim);
+      letter-spacing: 0.05em;
+    }
+
+    .skills li::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--gold);
+      flex-shrink: 0;
+    }
+
+    .skills li span.icon {
+      font-size: 1rem;
+    }
+
+    /* contact */
+    .contact {
+      display: flex;
+      flex-direction: row;
+      gap: 24px;
+      margin-bottom: 40px;
+      align-items: center;
+      flex-wrap: nowrap;
+    }
+
+    .contact a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--gold);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      transition: color 0.2s;
+      white-space: nowrap;
+    }
+
+    .contact a:hover { color: var(--gold-light); }
+
+    .contact-icon {
+      width: 18px;
+      opacity: 0.8;
+    }
+
+    /* social buttons */
+    .socials {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 10px 24px;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      text-decoration: none;
+      background: transparent;
+      cursor: pointer;
+      transition: background 0.25s, color 0.25s;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background: var(--gold);
+      color: var(--black);
+    }
+
+    .btn.solid {
+      background: var(--gold);
+      color: var(--black);
+    }
+
+    .btn.solid:hover {
+      background: var(--gold-light);
+    }
+
+    /* ── RIGHT — photo ── */
+    .hero-right {
+      flex: 1.4;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      animation: fadeUp 1.2s ease 0.2s both;
+      position: relative;
+    }
+    .hero-right img {
+      width: 100%;
+      max-width: 500px;
+      height: 380px;
+    }
+    /* SVG wave decoration behind photo */
+    .wave-deco {
+      position: absolute;
+      top: -50px;
+      right: -60px;
+      width: 420px;
+      opacity: 0.55;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .photo-frame {
+      position: relative;
+      z-index: 1;
+      width: 480px;
+      height: 480px;
+      margin-right: -13px;
+      margin-top: -10px;
+    }
+
+    /* outer gold ring */
+    .photo-frame::before {
+      content: '';
+      position: absolute;
+      inset: -8px;
+      border-radius: 50%;
+      border: 2px solid var(--gold);
+      opacity: 0.65;
+    }
+
+    /* inner glow ring */
+    .photo-frame::after {
+      content: '';
+      position: absolute;
+      inset: -20px;
+      border-radius: 50%;
+      border: 1px solid rgba(201,168,76,0.25);
+    }
+
+    .photo-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      display: block;
+      filter: brightness(0.93) contrast(1.08);
+      box-shadow: 0 20 px 40px rgb(0, 0, 0, 0.6);
+    }
+
+    /* placeholder if no image */
+    .photo-placeholder {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 5rem;
+      color: var(--gold-dim);
+    }
+
+    /* ── SECTIONS ── */
+    section.content {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 80px 40px;
+      border-top: 1px solid rgba(201,168,76,0.12);
+    }
+
+    .section-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 300;
+      color: var(--white);
+      margin-bottom: 40px;
+      line-height: 1.2;
+    }
+
+    /* projects grid */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .project-card {
+      border: 1px solid rgba(201,168,76,0.2);
+      padding: 28px;
+      background: rgba(201,168,76,0.03);
+      transition: border-color 0.25s, background 0.25s;
+      cursor: pointer;
+    }
+
+    .project-card:hover {
+      border-color: var(--gold);
+      background: rgba(201,168,76,0.07);
+    }
+
+    .project-card h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--gold);
+      margin-bottom: 10px;
+      letter-spacing: 0.05em;
+    }
+
+    .project-card p {
+      font-size: 0.85rem;
+      color: var(--white-dim);
+      line-height: 1.7;
+    }
+
+    .project-tag {
+      display: inline-block;
+      margin-top: 14px;
+      padding: 3px 10px;
+      border: 1px solid rgba(201,168,76,0.4);
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      color: var(--gold);
+      text-transform: uppercase;
+    }
+
+    /* footer */
+    footer {
+      text-align: center;
+      padding: 40px;
+      border-top: 1px solid rgba(201,168,76,0.1);
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.25);
+      letter-spacing: 0.1em;
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 700px) {
+      .hero-inner { flex-direction: column-reverse; gap: 40px; text-align: center; }
+      .divider { margin: 0 auto 28px; }
+      .photo-frame { width: 240px; height: 240px; }
+      .wave-deco { width: 500px; right: -20px; top: -20px; }
+      .socials { justify-content: center; }
+      .contact a { justify-content: center; }
+    }
+    .tagline-hero {
+      font-size: clamp(1.6rem, 3.2vw, 2.2rem);
+    }
+    section.content {
+      padding: 40px 40px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══ HERO ═══ -->
+<div class="hero">
+
+  <!-- SVG wave decoration (top-right corner) -->
+  <div style="position:absolute;top:0;right:0;width:45%;pointer-events:none;opacity:0.4;z-index:0;">
+    <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <style>.wl{fill:none;stroke:#c9a84c;stroke-width:0.8;}</style>
+      </defs>
+      <!-- concentric arcs emanating from top-right -->
+      <path class="wl" d="M500,0 Q300,200 100,500" opacity="0.9"/>
+      <path class="wl" d="M500,0 Q320,220 80,500"  opacity="0.8"/>
+      <path class="wl" d="M500,0 Q340,240 60,500"  opacity="0.7"/>
+      <path class="wl" d="M500,0 Q360,260 40,500"  opacity="0.6"/>
+      <path class="wl" d="M500,0 Q380,280 20,500"  opacity="0.5"/>
+      <path class="wl" d="M500,20 Q390,290 10,500" opacity="0.4"/>
+      <path class="wl" d="M500,40 Q400,300 0,500"  opacity="0.3"/>
+      <path class="wl" d="M500,60 Q410,310 0,480"  opacity="0.25"/>
+      <path class="wl" d="M500,80 Q420,320 0,460"  opacity="0.2"/>
+      <path class="wl" d="M500,100 Q430,330 0,440" opacity="0.15"/>
+      <path class="wl" d="M500,120 Q440,340 0,420" opacity="0.1"/>
+    </svg>
+  </div>
+
+  <div class="hero-inner">
+
+    <!-- LEFT -->
+    <div class="hero-left">
+      <div class="name">Warrie Godswill</div>
+      <div class="title">Data Analyst &nbsp;|&nbsp; BI &amp; Automation</div>
+      
+      <div class="tagline-wrapper">
+        <div class="divider"></div>
+
+        <p class="tagline tagline-hero"><strong>Data doesn't lie</strong> <br>    <span>  ....<strong>people just misread it.</strong></span></p>
+      </div>
+        <p class="tagline">
+          I transform raw data into <strong>actionable insights,<br>automated workflows,</strong> and business growth.
+        </p>
+
+      <ul class="skills">
+        <li><span class="icon">📊</span> Excel, Google Sheet,& Power BI Dashboards</li>
+        <li><span class="icon">📈</span> Tableau & Data Visualization</li>
+        <li><span class="icon">⚙️</span> Automation (n8n, Python)</li>
+        <li><span class="icon">🗄️</span> SQL &amp; Data Analysis</li>
+        <li><span class="icon">🐍</span> Python (Pandas, NumPy, Streamlit)</li>
+      </ul>
+
+      <div class="contact">
+        <a href="tel:+2349165958973">
+          <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+          +234 916 595 8973
+        </a>
+        <a href="mailto:warriegodswill01@gmail.com">
+          <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          warriegodswill01@gmail.com
+        </a>
+      </div>
+
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/warrie-godswill-2ab6b7169/" target="_blank" class="btn solid">LinkedIn</a>
+        <a href="https://github.com/Spenzzi-Tech" target="_blank" class="btn">GitHub</a>
+        <a href="ab.html" class="btn">About me</a>
+        <a href="resume.pdf" target="_blank" class="btn">Download Resume</a>
+        <a href="#projects" class="btn">View PROJECTS</a>
+      </div>
+    </div>
+
+    <!-- RIGHT — photo -->
+    <div class="hero-right">
+      <!-- wave deco behind photo -->
+      <svg class="wave-deco" viewBox="0 0 340 340" xmlns="http://www.w3.org/2000/svg">
+        <defs><style>.pw{fill:none;stroke:#c9a84c;stroke-width:0.7;}</style></defs>
+        <circle class="pw" cx="170" cy="170" r="155" opacity="0.5"/>
+        <circle class="pw" cx="170" cy="170" r="165" opacity="0.35"/>
+        <circle class="pw" cx="170" cy="170" r="175" opacity="0.22"/>
+        <path class="pw" d="M170,5 Q300,80 335,170 Q300,260 170,335 Q40,260 5,170 Q40,80 170,5" opacity="0.3"/>
+        <path class="pw" d="M170,15 Q295,85 325,170 Q295,255 170,325 Q45,255 15,170 Q45,85 170,15" opacity="0.2"/>
+      </svg>
+
+      <div class="photo-frame">
+        <!-- Replace src with your actual photo path: assets/images/warrie-profile.png -->
+        <img src="images/warrie profile.png" alt="Warrie Godswill"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <div class="photo-placeholder" style="display:none;">👤</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══ PROJECTS ═══ -->
+<section class="content" id="projects">
+  <div class="section-label">Portfolio</div>
+  <div class="section-title">PROJECTS</div>
+
+
+  <div class="projects-grid">
+    <div class="project-card">
+      <h3>Customer Sentiment Analysis for Nigerian Digital Banking Platforms</h3>
+      <p>Built a Streamlit app to analyse customer sentiment from banking app reviews using NLP i.e classifying feedback into positive, neutral, and negative to uncover key issues like transaction failures and app downtime.</p>
+        <span class="project-tag">Python</span>
+        <span class="project-tag">NLP</span>
+        <span class="project-tag">Streamlit </span> 
+        <span class="project-tag">EDA</span>
+     <div class="project-links">
+        <a href="customer-sentiment-analysis.html" target="_blank" class="btn">View Details →</a>
+      </div>
+    </div>
+  
+    <div class="project-card">
+      <h3>Superstore Sales Performance Dashboard</h3>
+      <p>Developed an interactive Excel dashboard to track key sales KPIs, analyze regional performance, and uncover revenue trends using Pivot Tables, charts, and dynamic filters.</p>
+        <span class="project-tag">Excel</span>
+        <span class="project-tag">Pivot Table</span>
+        <span class="project-tag">Data Analysis</span>
+      <div class="project-links">
+        <a href="sales-performance-analysis.html" target="_blank" class="btn">View Details →</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <h3>Titanic Survival Analysis Dashboard</h3>
+      <p>Analyzed the Titanic dataset and built an interactive Streamlit app to explore survival patterns across gender, class, and age.</p>
+        <span class="project-tag">Python</span>
+        <span class="project-tag">Streamlit</span>
+        <span class="project-tag">Pandas</span>
+        <span class="project-tag">EDA</span>
+      <div class="project-links">
+        <a href="Titanic.html" target="_blank" class="btn">View Details →</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <h3>Cookie Sales Financial Dashboard</h3>
+      <p>Analyzed multi-country cookie sales data and built a Power BI dashboard to track KPIs, uncovering $4.69M revenue and key product and regional performance trends.</p>
+        <span class="project-tag">Power BI</span>
+        <span class="project-tag">DAX</span>
+        <span class="project-tag">Power Query</span>
+        <span class="project-tag">Data Visualization</span>
+      <div class="project-links">
+        <a href="cookies.html" target="_blank" class="btn">View Details →</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <h3>Workflow Automation</h3>
+      <p>Built automation workflows using n8n to streamline data processes and reduce manual reporting effort.</p>
+        <span class="project-tag">n8n</span>
+        <span class="project-tag">Python</span>
+    </div>
+
+    <div class="project-card">
+      <h3>E-Commerce Sales Dashboard</h3>
+      <p>Analyzed e-commerce sales data to uncover revenue trends, customer behavior, and payment patterns using Excel and data visualization techniques.</p>
+        <span class="project-tag">Excel</span>
+       <span class="project-tag">Data Analysis</span>
+      <div class="project-links">
+        <a href="E-commerce.html" target="_blank" class="btn">View Details →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  &copy; 2026 Warrie Godswill &nbsp;·&nbsp; Data Analyst &amp; BI Specialist
+</footer>
+
+</body>
+</html>

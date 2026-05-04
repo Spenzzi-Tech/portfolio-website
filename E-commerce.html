@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>E-commerce Sales Performance Analysis</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+  --gold: #c9a84c;
+  --gold-light: #e8c97a;
+  --gold-dim: rgba(201,168,76,0.15);
+  --black: #000000;
+  --white: #ffffff;
+  --white-dim: rgba(255,255,255,0.7);
+}
+
+/* base reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  padding: 40px;
+}
+
+/* layout container */
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* headings */
+h1 {
+  color: var(--gold);
+  margin-bottom: 10px;
+  margin-top: -30px;
+  text-align: center;
+}
+
+h2 {
+  margin-top: 30px;
+  color: var(--gold);
+  font-size: 2.1rem;
+  top: 10px;
+  margin-left: 30px;
+}
+
+ul{
+  margin-left: 50px;
+}
+
+/* text */
+p {
+  margin-left: 30px;
+}
+
+/* tags */
+.tags {
+  margin-bottom: 25px;
+  margin-left: 15px;
+}
+
+.tags span {
+  display: inline-block;
+  border: 1px solid rgba(201,168,76,0.4);
+  padding: 4px 10px;
+  margin-right: 8px;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+/* buttons */
+.btn {
+  padding: 10px 24px;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.25s, color 0.25s;
+  display: inline-block;
+}
+
+.btn:hover {
+  background: var(--gold);
+  color: var(--black);
+}
+
+.btn.solid {
+  background: var(--gold);
+  color: var(--black);
+}
+
+.btn.solid:hover {
+  background: var(--gold-light);
+}
+
+/* project cards (reusable across pages) */
+.project-card {
+  border: 1px solid rgba(201,168,76,0.2);
+  padding: 24px;
+  background: rgba(201,168,76,0.03);
+  transition: 0.25s;
+}
+
+.project-card:hover {
+  border-color: var(--gold);
+  background: rgba(201,168,76,0.07);
+}
+
+/* grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* image */
+.project-img {
+  width: 100%;
+  margin-top: 20px;
+  border: 1px solid rgba(201,168,76,0.2);
+}
+
+/* back link */
+.back-btn {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: var(--gold);
+  text-decoration: none;
+  font-size: 0.5rem;
+  letter-spacing: 0.2em;
+  margin-bottom: 40px;
+  margin-top: 30px;
+  padding: 10px 20px;
+  border: 1px solid var(--gold);
+}
+.back-btn:hover {
+  background: var(--gold);
+  color: var(--black);
+}
+.highlight {
+  color: var(--text-dim);
+  margin-bottom: 20px;
+  font-size: 1.12rem;
+  max-width: 85%;
+  margin: 0 auto 35px auto;
+  line-height: 1.6;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+</style>
+
+<div class="project-container">
+
+  <a href="index.html#projects" class="back-btn">← Back to Projects</a>
+
+  <h1>E-commerce Sale Performance Analysis</h1>
+  <p class="highlight"> 
+    Most people clean a dataset and call it a project. You built a business tool. A fully interactive Excel dashboard tracking $161,940 in revenue across three years, five product categories, four payment methods, and 91 orders. That is the difference between a course exercise and a portfolio piece.
+  </p>
+
+  <div class="tags">
+    <span class="tags">Microsoft Excel</span>
+    <span class="tags">Pivot Table</span>
+    <span class="tags">Data cleaning</span>
+    <span class="tags">EDA</span>
+    <span class="tags">Dashboard</span>
+  </div>
+
+  <h2>Project Overview</h2>
+  <p class="highlight">
+    Took a messy, unusable e-commerce sales dataset and turned it into a dashboard a business owner could open on a Monday morning and make decisions from before lunch. Covered revenue trends across 2023, 2024, and 2025, category and product performance, customer rankings, payment method breakdown, and order fulfilment status. Built entirely in Excel, which matters because Excel is still the most used analytics tool in every industry a recruiter will be hiring for.
+  </p>
+
+  <h2>Problem Statement</h2>
+  <p class="highlight">
+    Every e-commerce business is sitting on transaction data they cannot read. They know their total sales figure. They do not know which category is carrying the business, which customers are worth keeping, which payment method their best buyers prefer, or why 2024 looked so different from 2023. They are making inventory, marketing, and customer decisions on instinct when the answers are already in their data.
+    This project exists to fix that. One dashboard. Every answer visible in under 60 seconds.
+  </p>
+
+  <h2>What I Did</h2>
+  <ul>
+    <li>Sourced a messy e-commerce dataset with inconsistencies, missing values, and unstructured records across multiple years and categories. Cleaned it properly before touching a single chart because dirty data produces confident wrong answers.
+    <li>Built a pivot table structure to aggregate revenue, quantity sold, order status, and customer spend across every dimension the business cares about.</li>
+    <li>Designed the full dashboard from scratch in Excel covering eight distinct analysis areas: revenue trend over three years, monthly sales trend, category performance, top 5 products by revenue, order status breakdown, payment method distribution, top 5 customers by total spend, and key insights summary.</li>
+    <li>Added slicers for year, order status, and payment method so any non-technical stakeholder can filter the entire dashboard in real time without touching the underlying data.</li>
+    <li>Wrote the key insights directly on the dashboard so the business does not have to interpret charts. The conclusion is already there.</li>
+  </ul>
+
+  <h2>Key Findings</h2>
+  <ul>
+    <li>Home ($46,936) and Clothing ($40,073) are carrying the business. </li>
+    <li>Every other category is a secondary concern until these two are fully optimised.</li>
+    <li>Shoes ($17,955) leads all individual products. If this business is not prioritising Shoes in its marketing spend, it is leaving money on the table.</li>
+    <li>PayPal ($64,758) dominates payment methods by a significant margin. Credit Card ($43,024) and Cash on Delivery ($27,580) are distant second and third. The checkout experience should be built around PayPal first.</li>
+    <li>2024 was a breakout year at $140,335 revenue, up from $18,351 in 2023 and $3,254 in 2022. The business needs to understand exactly what changed in 2024 and replicate it deliberately, not accidentally.
+        Customer 117 spent $20,000 alone. The next highest customer spent $6,453. That gap is a retention risk. If Customer 117 leaves, the business feels it immediately.</li>
+    <li>Processing and Shipped orders dominate order status at 24 and 22 respectively. A large volume of orders are still in fulfilment. That is either a growth sign or an operational bottleneck. Either way it needs watching.</li>
+
+  </ul>
+
+  <h2>Impact</h2>
+  <p class="highlight">
+    This is what separates analysts who can code from analysts who can think. The dashboard does not just show numbers. It surfaces the decisions the business needs to make: double down on Home and Clothing, protect Customer 117, investigate what drove 2024 growth, and build the checkout experience around PayPal.
+    For recruiters, this project answers the only question that matters in an interview. Can this person take messy data and tell me something useful? The answer is yes, and the dashboard proves it without a single word of explanation needed.
+  </p>
+
+  <img src="images/dashboard3.png" alt="Dashboard Preview" class="project-img">
+
+  <a href="https://1drv.ms/x/c/ad8e3c12c76b1a91/IQBMe9qrjmllSLJwcqv2xgz2AYAJOM_wnuSYjO-Dl5PBar0?e=p4QORS" target="_blank" class="btn">
+    View Live Dashboard
+  </a>
+
+</div>

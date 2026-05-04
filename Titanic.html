@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Titanic Survival Analysis</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+  --gold: #c9a84c;
+  --gold-light: #e8c97a;
+  --gold-dim: rgba(201,168,76,0.15);
+  --black: #000000;
+  --white: #ffffff;
+  --white-dim: rgba(255,255,255,0.7);
+}
+
+/* base reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  padding: 40px;
+}
+
+/* layout container */
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* headings */
+h1 {
+  color: var(--gold);
+  margin-bottom: 10px;
+  margin-top: -30px;
+  text-align: center;
+}
+
+h2 {
+  margin-top: 30px;
+  color: var(--gold);
+  font-size: 2.1rem;
+  top: 10px;
+  margin-left: 30px;
+}
+
+ul{
+  margin-left: 50px;
+}
+
+/* text */
+p {
+  margin-left: 30px;
+}
+
+/* tags */
+.tags {
+  margin-bottom: 25px;
+  margin-left: 15px;
+}
+
+.tags span {
+  display: inline-block;
+  border: 1px solid rgba(201,168,76,0.4);
+  padding: 4px 10px;
+  margin-right: 8px;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+/* buttons */
+.btn {
+  padding: 10px 24px;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.25s, color 0.25s;
+  display: inline-block;
+}
+
+.btn:hover {
+  background: var(--gold);
+  color: var(--black);
+}
+
+.btn.solid {
+  background: var(--gold);
+  color: var(--black);
+}
+
+.btn.solid:hover {
+  background: var(--gold-light);
+}
+
+/* project cards (reusable across pages) */
+.project-card {
+  border: 1px solid rgba(201,168,76,0.2);
+  padding: 24px;
+  background: rgba(201,168,76,0.03);
+  transition: 0.25s;
+}
+
+.project-card:hover {
+  border-color: var(--gold);
+  background: rgba(201,168,76,0.07);
+}
+
+/* grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* image */
+.project-img {
+  width: 100%;
+  margin-top: 20px;
+  border: 1px solid rgba(201,168,76,0.2);
+}
+
+/* back link */
+.back-btn {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: var(--gold);
+  text-decoration: none;
+  font-size: 0.5rem;
+  letter-spacing: 0.2em;
+  margin-bottom: 40px;
+  margin-top: 30px;
+  padding: 10px 20px;
+  border: 1px solid var(--gold);
+}
+.back-btn:hover {
+  background: var(--gold);
+  color: var(--black);
+}
+.highlight {
+  color: var(--text-dim);
+  margin-bottom: 20px;
+  font-size: 1.12rem;
+  max-width: 85%;
+  margin: 0 auto 35px auto;
+  line-height: 1.6;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+</style>
+
+<div class="project-container">
+
+  <a href="index.html#projects" class="back-btn">← Back to Projects</a>
+
+  <h1>Titanic Survival Rate Exploratory Data Analysis (EDA)</h1>
+  <p class="highlight"> 
+    Performed EDA 1,046 Titanic passengers,revealing that gender, ticket class, and fare paid were the three strongest predictors of survival with females and 1st class passengers showing the highest survival rates.
+  </p>
+
+  <div class="tags">
+    <span class="tags">Python</span>
+    <span class="tags">Streamlit</span>
+    <span class="tags">Pandas</span>
+    <span class="tags">EDA</span>
+  </div>
+
+  <h2>Project Overview</h2>
+  <p class="highlight">
+    Conducted an Exploratory Data Analysis (EDA) on the Titanic passenger dataset to uncover the key factors that determined survival. Working with 1,046 passenger records, the analysis examined the relationship between survival outcomes and variables including gender, ticket class, age, fare paid, and embarkation port.
+    The project involved cleaning and preprocessing raw passenger data, engineering relevant features, and building an interactive dashboard with dynamic filters that allow users to slice the data by gender, class, embarkation point, and age range in real time.
+    Key findings revealed that survival was not random, it was heavily influenced by socioeconomic status and gender. First class passengers survived at nearly double the rate of third class passengers, females survived at a drastically higher rate than males, and higher fares strongly correlated with survival probability. Of the 1,046 passengers analyzed, only 417 survived, a 39.87% survival rate with 629 deaths recorded.
+    The dashboard visualizes these patterns across four charts: Survival Rate by Sex, Survival Rate by Class, Age Distribution by Survival, and Fare vs Survival, giving stakeholders a clear, data-driven picture of what determined life or death on the Titanic.
+  </p>
+
+  <h2>Problem Statement</h2>
+  <p class="highlight">
+    The Titanic disaster of 1912 claimed 1,517 lives, yet survival was far from equal. Historical records suggest that factors beyond pure chance including gender, socioeconomic class, age, and fare paid played a significant role in determining who lived and who died. However, without structured analysis, these patterns remain buried in raw passenger data and cannot be used to draw meaningful conclusions.
+    The challenge was to move beyond surface-level observation and apply data analytics to answer a precise question: what passenger characteristics most strongly predicted survival, and by how much?
+    Existing accounts of the disaster rely heavily on narrative and anecdote. This project replaces assumption with evidence, using exploratory data analysis and interactive visualization to quantify exactly how much gender, class, and fare influenced survival outcomes across 1,046 passengers.
+    The result is not just an analysis of a historical event. It is a demonstration of how raw, unstructured data can be transformed into clear, evidence-based insight, the same skill applied in any business context where decisions need to move from gut feeling to data-driven fact.
+  </p>
+
+  <h2>What I Did</h2>
+  <ul>
+    <li>Sourced the Titanic passenger dataset from Kaggle, one of the most widely used public datasets in data analytics, containing 1,046 records across variables including passenger class, gender, age, fare, cabin, and embarkation port.</li>
+    <li>Cleaned and preprocessed the raw data by handling missing values, removing irrelevant columns, and ensuring data types were consistent and ready for analysis.</li>
+    <li>Performed exploratory data analysis to identify patterns and relationships between passenger characteristics and survival outcomes. Examined survival rates across gender, ticket class, age groups, and fare brackets to determine which variables had the strongest influence on whether a passenger survived.</li>
+    <li>Built four core visualizations to communicate findings clearly. A survival rate by sex chart showing the stark difference between male and female survival rates. A survival rate by class chart revealing how first class passengers significantly outperformed second and third class. An age distribution by survival histogram showing how age interacted with survival probability. A fare versus survival scatter plot confirming that passengers who paid higher fares were more likely to survive.</li>
+    <li>Built and deployed an interactive dashboard with dynamic filters allowing users to slice the entire analysis by gender, passenger class, embarkation port, and age range in real time, making the findings accessible to non-technical stakeholders.</li>
+    <li>Documented three key insights from the analysis. Females had a higher survival rate than males. Higher class passengers survived more than lower class passengers. Fare paid positively correlates with survival probability.</li>
+  </ul>
+
+  <h2>Key Findings</h2>
+  <ul>
+    <li> Females had a significantly hihger survival rates than males.</li>
+    <li> Higher class passengers survived more than lowe class passengers.</li>
+    <li> Fare correlates with survival i.e passengers who paid more were more likely to survive.</li>
+  </ul>
+
+  <h2>Impact</h2>
+  <p class="highlight">
+    This analysis transforms a well known historical dataset into a clear demonstration of analytical thinking and business relevant storytelling.
+    By quantifying survival patterns across 1,046 passengers, the project proves that socioeconomic status and gender were not just contributing factors but decisive ones. First class passengers and female passengers did not simply fare better by chance. The data shows a structured, measurable pattern that holds across every filter applied including age range, embarkation port, and fare bracket.
+    For recruiters and hiring managers, this project signals three things. First, the ability to take raw, messy data and extract a coherent narrative. Second, the ability to build an interactive tool that allows non-technical stakeholders to explore findings without needing to understand the underlying analysis. Third, the ability to connect historical or abstract data to conclusions that actually mean something in a business context.
+    The interactive dashboard with filters for gender, class, age and embarkation port means the findings are not static. Any stakeholder can interrogate the data themselves, test their assumptions, and arrive at conclusions grounded in evidence rather than opinion.
+    In a business setting, this same approach applied to customer data, sales records, or operational metrics would give decision makers the same clarity this dashboard gives on Titanic survival. That transferability is the real impact.
+  </p>
+
+  <img src="images/dashboard4.png" alt="Dashboard Preview" class="project-img">
+
+  <a href="https://titanic-survival-rate-exploratory-data-analysis-eda.streamlit.app/" target="_blank" class="btn">
+    View Live Dashboard
+  </a>
+
+</div>

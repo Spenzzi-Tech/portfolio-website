@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cookie Sales Financial Analysis</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+  --gold: #c9a84c;
+  --gold-light: #e8c97a;
+  --gold-dim: rgba(201,168,76,0.15);
+  --black: #000000;
+  --white: #ffffff;
+  --white-dim: rgba(255,255,255,0.7);
+}
+
+/* base reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  padding: 40px;
+}
+
+/* layout container */
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* headings */
+h1 {
+  color: var(--gold);
+  margin-bottom: 10px;
+  margin-top: -30px;
+  text-align: center;
+}
+
+h2 {
+  margin-top: 30px;
+  color: var(--gold);
+  font-size: 2.1rem;
+  top: 10px;
+  margin-left: 30px;
+}
+
+ul{
+  margin-left: 50px;
+}
+
+/* text */
+p {
+  margin-left: 30px;
+}
+
+/* tags */
+.tags {
+  margin-bottom: 25px;
+  margin-left: 15px;
+}
+
+.tags span {
+  display: inline-block;
+  border: 1px solid rgba(201,168,76,0.4);
+  padding: 4px 10px;
+  margin-right: 8px;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+/* buttons */
+.btn {
+  padding: 10px 24px;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.25s, color 0.25s;
+  display: inline-block;
+}
+
+.btn:hover {
+  background: var(--gold);
+  color: var(--black);
+}
+
+.btn.solid {
+  background: var(--gold);
+  color: var(--black);
+}
+
+.btn.solid:hover {
+  background: var(--gold-light);
+}
+
+/* project cards (reusable across pages) */
+.project-card {
+  border: 1px solid rgba(201,168,76,0.2);
+  padding: 24px;
+  background: rgba(201,168,76,0.03);
+  transition: 0.25s;
+}
+
+.project-card:hover {
+  border-color: var(--gold);
+  background: rgba(201,168,76,0.07);
+}
+
+/* grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* image */
+.project-img {
+  width: 100%;
+  margin-top: 20px;
+  border: 1px solid rgba(201,168,76,0.2);
+}
+
+/* back link */
+.back-btn {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: var(--gold);
+  text-decoration: none;
+  font-size: 0.5rem;
+  letter-spacing: 0.2em;
+  margin-bottom: 40px;
+  margin-top: 30px;
+  padding: 10px 20px;
+  border: 1px solid var(--gold);
+}
+.back-btn:hover {
+  background: var(--gold);
+  color: var(--black);
+}
+.highlight {
+  color: var(--text-dim);
+  margin-bottom: 20px;
+  font-size: 1.12rem;
+  max-width: 85%;
+  margin: 0 auto 35px auto;
+  line-height: 1.6;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+</style>
+
+<div class="project-container">
+
+  <a href="index.html#projects" class="back-btn">← Back to Projects</a>
+
+  <h1>Cookie Sales Financial Analysis</h1>
+  <p class="highlight"> 
+    Built a Cookie Sales Financial Dashboard tracking $4.69M in total revenue, $2.76M in profit, and 1.13M units sold across 5 countries, 6 product lines, and 2 years. A 58.9% profit margin tells you immediately this is a healthy business. The dashboard tells you exactly why.
+  </p>
+
+  <div class="tags">
+    <span class="tags">POWER BI</span>
+    <span class="tags">DAX</span>
+    <span class="tags">DASHBOARD</span>
+    <span class="tags">FINANCIAL ANALYSIS</span>
+    <span class="tags">DATA VISUALISATION</span>
+    <span class="tags">SALES ANALYSIS</span>
+  </div>
+
+  <h2>Project Overview</h2>
+  <p class="highlight">
+    Analyzed cookie sales data across Canada, France, United States, Germany, and Mexico to track financial performance by country, product, and time period. Built an interactive Power BI dashboard with slicers for country, year, and product that give stakeholders a complete picture of revenue, profit, and sales volume in a single view.
+  </p>
+
+  <h2>Problem Statement</h2>
+  <p class="highlight">
+    A business selling across 5 countries and 6 product lines cannot manage performance by instinct. Without a structured view of which country generates the most revenue, which product drives the most profit, and how sales are trending over time, budget decisions, marketing spend, and inventory planning are all guesswork. This dashboard removes the guesswork entirely.
+  </p>
+
+  <h2>What I Did</h2>
+  <ul>
+    <li>Sourced and cleaned a cookie sales dataset covering transactions across multiple countries, products, and time periods from 2018 to 2019.</li>
+    <li>Built calculated measures for total revenue, total profit, total units sold, and profit margin percentage.</li>
+    <li>Designed a full financial dashboard in Power BI covering 7 analysis areas: revenue by country, total sales by product, revenue by product, sales trend by year, quarter, month and day, combined sales and profit trend by year, profit by country, and profit margin by product.</li>
+    <li>Added slicers for country, year, and product so stakeholders can filter the entire dashboard in real time.</li>
+  </ul>
+
+  <h2>Key Findings</h2>
+  <ul>
+    <li>Total revenue hit $4.69M with a profit of $2.76M and a profit margin of 58.9%. That margin means the business is highly efficient at converting sales into profit.</li>
+    <li>Chocolate Chip dominates product revenue at $1.69M, accounting for 36.06% of total revenue. No other product comes close.</li>
+    <li>Canada leads all countries in revenue, followed by France and United States. Mexico and Germany trail significantly.</li>
+    <li>Canada also leads profit at $606K (21.94%), with Mexico ($595K) and Germany ($574K) close behind. France and United States follow.</li>
+    <li>Sales volume peaked consistently through mid to late 2019, with clear seasonal fluctuations visible in the monthly trend chart.</li>
+    <li>Revenue, profit, and sales volume all grew steadily from 2018 to 2019, confirming the business was in a strong growth phase across the data period.</li>
+  </ul>
+
+  <h2>Impact</h2>
+  <p class="highlight">
+    This dashboard tells a business three things it needs to know immediately. Chocolate Chip is the product to protect and scale. Canada is the market leading revenue and profit. And the business grew consistently from 2018 to 2019 with no sign of decline.
+    For recruiters, this project demonstrates the ability to handle multi-dimensional financial data across countries, products, and time periods and present it in a format that drives decisions, not just describes numbers.
+  </p>
+
+  <img src="images/dashboard5.jpeg" alt="Dashboard Preview" class="project-img">
+</div>
